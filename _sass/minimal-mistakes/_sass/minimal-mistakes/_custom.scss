@@ -15,3 +15,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700; /* Make headings bold */
     color: #222; /* Slightly darker for contrast */
 }
+.page__content {
+    background: rgba(255, 255, 255, 0.8); /* Light white background */
+    padding: 20px;
+    border-radius: 10px; /* Smooth corners */
+}
