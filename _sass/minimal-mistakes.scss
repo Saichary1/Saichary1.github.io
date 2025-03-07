@@ -35,3 +35,11 @@
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
+
+body {
+    background-image: url('/background.jpg'); /* Use the image you uploaded */
+    background-size: cover; /* Make sure it covers the entire screen */
+    background-attachment: fixed; /* Keep it fixed while scrolling */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+}
