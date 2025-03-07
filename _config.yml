@@ -322,3 +322,6 @@ defaults:
       comments: # true
       share: true
       related: true
+
+sass:
+  style: compressed
