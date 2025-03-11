@@ -321,3 +321,6 @@ defaults:
       share: true
       related: true
 
+remote_theme: mmistakes/minimal-mistakes
+plugins:
+  - jekyll-include-cache
