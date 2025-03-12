@@ -1,66 +1,146 @@
-/* Set a clean, modern background */
-body {
-    background: #f4f4f4; /* Light gray background for a clean look */
-    color: #333; /* Dark gray text for better readability */
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px; /* Default text size */
+/* ======== GLOBAL STYLES ======== */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-/* Improve text contrast */
-h1, h2, h3, h4, h5, h6 {
+body {
+    background-image: url('background.jpg'); /* Update with correct file */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: 'Poppins', sans-serif;
-    font-weight: 700; /* Bold headings */
-    color: #222; /* Darker color for contrast */
-}
-
-/* Make content stand out with a white box */
-.page__content {
-    background: #ffffff; /* White background for better readability */
-    padding: 30px;
-    border-radius: 10px; /* Smooth edges */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin: 20px auto;
-    max-width: 900px;
-}
-
-/* Adjust navigation bar */
-.site-header {
-    background: #ffffff;
-    border-bottom: 2px solid #ddd;
-    padding: 10px 20px;
-}
-
-/* Improve project list */
-ul {
-    list-style-type: square; /* Stylish bullet points */
-    padding-left: 20px;
-}
-
-/* Headings size */
-h1 {
-    font-size: 36px;
-}
-
-h2 {
-    font-size: 28px;
-}
-
-h3 {
-    font-size: 24px;
-}
-
-/* Footer styling */
-.site-footer {
-    background: #fff;
-    padding: 10px;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    font-size: 14px;
-    color: #666;
+    position: relative;
 }
 
-/* Hide "Powered by Jekyll" */
-.powered-by {
-    display: none !important;
+/* Dark overlay for better readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* ======== NAVIGATION BAR ======== */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* ======== HEADER / HERO SECTION ======== */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 600px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* ======== CONTENT SECTION ======== */
+.page__content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: left;
+    color: #333;
+}
+
+/* ======== BUTTON STYLES ======== */
+button {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+    background: #e67e22;
+    transform: scale(1.05);
+}
+
+/* ======== FOOTER ======== */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    margin-top: auto;
+}
+
+/* ======== RESPONSIVE DESIGN ======== */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
